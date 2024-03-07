@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Are You Gay?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .heading {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .button {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+    .button:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+<body>
+<h1 class="heading">ARE YOU GAY?</h1>
+<button id="yes" class="button">Yes</button>
+<button id="no" class="button">No</button>
+
+<script>
+    const yesButton = document.getElementById('yes');
+    const noButton = document.getElementById('no');
+
+    yesButton.addEventListener('click', function() {
+        window.location.href = '1.html';
+    });
+
+    noButton.addEventListener('mouseover', function() {
+        const maxX = window.innerWidth - noButton.offsetWidth;
+        const maxY = window.innerHeight - noButton.offsetHeight;
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+        
+        noButton.style.position = 'absolute';
+        noButton.style.left = randomX + 'px';
+        noButton.style.top = randomY + 'px';
+    });
+</script>
+</body>
+</html>
